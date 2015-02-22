@@ -10,6 +10,11 @@
         <p class="view"><a href="https://mgocsmamerica.com">View the national site <small>old site</small></a></p>
         <p><a href="./constitution.pdf">Constitution</a></p>
         <p><a href="http://bit.ly/MGOCSM-prayers">MGOCSM Prayers</a></p>
+        <ul>
+            <li><a href="#" onClick="show_div('home'); return false;">Home</a></li>
+            <li><a href="#" onClick="show_div('lc'); return false;">Leadership Camp</a></li>
+            <li><a href="#" onClick="show_div('missions'); return false;">Missions</a></li>
+        </ul>
       </header>
       <section>
         <h3>
@@ -27,6 +32,9 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script><script type="text/javascript">
+    function show_div(div_id) {document.getElementById('home').style.display = 'none';
+document.getElementById('lc').style.display = 'none';
+document.getElementById('missions').style.display = 'none';}
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
             try {
