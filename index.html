@@ -59,8 +59,17 @@ Campus Ministry Directory Sheet (PDF)<br/>
 (EXCEL) Campus Ministry Directory Excel Spreadsheet</p>
 <p>INTERESTED IN SETTING UP MGOCSM CAMPUS MINISTRY IN YOUR AREA?
 Please fill out the following Excel Spreadsheet (Campus Ministry Directory Excel Spreadsheet) and e-mail it to mgocsmcampusministry@gmail.com.</p><p>If you have any questions feel free to e-mail mgocsmcampusministry@gmail.com</p>
-<script type="text/javascript">
-    function show_div(div_id) {document.getElementById('home').style.display = 'none';
+<h1>Devotionals</h1><div class="devotionals"></div>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' type='text/javascript'></script>
+<script type='text/javascript'>
+ $.getJSON("https://spreadsheets.google.com/feeds/list/1JQmEOQ6Dc_CDV9YeooaM0JZjTTdO1lffnqsZEkTtP1A/od6/public/values?alt=json", function(data) {
+  //first row "title" column
+  //console.log(data.feed.entry[0]['gsx$title']['$t']);
+  var devotional = document.querySelector(".devotionals");
+   if (data.feed.entry == 'e') devotional.innerHTML = devotional.innerHTML+"Connection to blog feed unsuccessful.";
+        else for (i in data.feed.entry) devotional.innerHTML = devotional.innerHTML+"<h2>" + data.feed.entry[i]['gsx$title']['$t'] + "</h2><p>" + data.feed.entry[i]['gsx$author']['$t'] + "</p><p>" + data.feed.entry[i]['gsx$content']['$t'];
+});
+function show_div(div_id) { document.getElementById('home').style.display = 'none';
 document.getElementById('lc').style.display = 'none';
 document.getElementById('missions').style.display = 'none';}
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
