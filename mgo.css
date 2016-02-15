@@ -1,0 +1,22 @@
+@font-face {font-family: Trajan Pro; src: url("http://rinodrummerdb.altervista.org/style/fonts/trajanpro/trajanpro-regular-webfont.eot") /* EOT file for IE */}
+@font-face {font-family: Trajan Pro; src: url("http://rinodrummerdb.altervista.org/style/fonts/trajanpro/trajanpro-regular-webfont.ttf") /* TTF file for CSS3 browsers */}
+@font-face { font-family: Trajan Pro; src: url("http://rinodrummerdb.altervista.org/style/fonts/trajanpro/trajanpro-regular-webfont.woff") /* WOFF file for CSS3 browsers */}
+html, body {margin:0; padding:0; color:#888; font-size:12px; font-family:Arial, sans-serif;}
+nav {position:fixed; top:0; bottom:0; background:#036; width:220px; text-align:center; font-size:11px; color:#ccc;}
+nav a {display:block; padding:0.3em; color:#0cf; font-size:1.8em; font-family:'Trajan Pro'; text-transform:uppercase;}
+nav a:focus, nav a:hover {background:#09f; color:#fff; text-decoration:none;}
+nav a:nth-child(1) {background:none; padding:0;}
+.logo {background:#cee; padding:2rem 1rem;}
+.main {background:#fff; max-width:800px; width:100%; margin:auto; text-align:center;}
+header {padding:10px; margin:auto;}
+header img {max-width:100px; width:100%;}
+.leaders {float:left; width:50%;} .news {float:right; width:50%; text-align:left;}
+h1 {font-family:'Trajan Pro', sans-serif; font-size:3em; font-weight:500; color:#c33; border-bottom:1px dotted #666; padding:10px;}
+h2, h3 {font-family:'Trajan Pro', san-serif; color:#036; text-align:center; font-size:2.5em; font-weight:500; letter-spacing:2px;}
+section img {max-width:100px; width:100%;}
+aside {position:fixed; top:0; bottom:0; right:0; width:220px; text-align:center; font-size:11px; color:#ccc; background:#036; padding-top:10em;}
+tr:nth-child(1) {font-weight:bold;}
+td {padding:5px; text-align:center;}
+@media (max-width:600px) {
+  nav {position:relative; width:100%;}
+}
