@@ -1,2 +1,2 @@
-# mgocsm
-MGOCSM info
+# MGOCSM
+MGOCSM redesigned site
