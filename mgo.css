@@ -9,11 +9,10 @@ nav a:nth-child(1) {background:none; padding:0;}
 .logo {background:#cee; padding:2rem 1rem;}
 .main {background:#fff; max-width:800px; width:100%; margin:auto; text-align:justify;}
 header {padding:10px; margin:auto;}
-header img {max-width:100px; width:100%;}
+header img, section img {max-width:100px; width:100%;}
 .news {text-align:left;}
 h1 {font-family:'Trajan Pro', sans-serif; font-size:3em; font-weight:500; color:#c33; border-bottom:1px dotted #666; padding:10px;}
 h2, h3 {font-family:'Trajan Pro', san-serif; color:#036; text-align:center; font-size:2.5em; font-weight:500; letter-spacing:2px;}
-section img {max-width:100px; width:100%;}
 tr:nth-child(1) {font-weight:bold;}
 td {padding:5px; text-align:center;}
 @media only screen and (max-width:600px) {
