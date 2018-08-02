@@ -1,2 +1,2 @@
-# MGOCSM
-MGOCSM redesigned site
+# TeamOrtho
+You Only Live Ortho
