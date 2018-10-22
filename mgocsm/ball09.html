@@ -12,6 +12,8 @@ body {background-color: #333333;
 a:link {color: #FF6600;	text-decoration: none;}
 a:visited {text-decoration: none; color: #FF6600;}
 a:hover {text-decoration: underline; color: #FF6600;}
+.image {position:relative; display:inline-block; font-size:1rem; text-align:center; text-transform:uppercase; margin:0 0 40px;}
+.image::after {display:inherit; position:absolute; top:0; left:0; width:100%; min-width:200px; padding:10px 20px 10px 45px; border:1px dashed #888; background-color:#f0f0f0; background-image:url(noimage.png); background-size:10%; background-repeat:no-repeat; background-position:15px 10px; z-index:1; content:"" attr(alt) " Not Found";}
 --></style><script type="text/javascript">
 function show_div(div_id) {document.getElementById('home').style.display = 'none';
 document.getElementById('teams').style.display = 'none';
@@ -42,7 +44,7 @@ document.write(dayNames[dt.getDay()] + ", " + monthNames[dt.getMonth()] + " " + 
 <tr>
   <td align="left">The MGOCSM Tournament <a href="#" onClick="show_div('results'); return false;"><b>Final Results</b></a> are posted! If you have any comments, feel free to contact us.<p></td></tr>
 <tr><td align="left" bgcolor="#FF6600" style="color:#FFFFFF"><b>&raquo; Tournament Details</b></td></tr>
-<tr><td align="left"><b>Date:</b><br>Saturday, September 5, 2009<p><b>Time:</b><br>8:00 AM - 8:00 PM<p><b>Parish Host:</b><br>St. Thomas (Mascher) Philadelphia<p><b>Location:</b><br>Kelly Bolish Gym<br>2950 Turnpike Drive<br>Hatboro, PA<br>&raquo; <a href="http://maps.google.com/maps?f=q&hl=en&q=2950+Turnpike+Drive,+Hatboro,+PA&ie=UTF8&ll=40.161903,-75.10241&spn=0.00874,0.019226&z=16&iwloc=A" target="_blank">Get Directions</a></td></tr></table><p><img src="mgocsm.jpg" width="130"><p></td>
+<tr><td align="left"><b>Date:</b><br>Saturday, September 5, 2009<p><b>Time:</b><br>8:00 AM - 8:00 PM<p><b>Parish Host:</b><br>St. Thomas (Mascher) Philadelphia<p><b>Location:</b><br>Kelly Bolish Gym<br>2950 Turnpike Drive<br>Hatboro, PA<br>&raquo; <a href="http://maps.google.com/maps?f=q&hl=en&q=2950+Turnpike+Drive,+Hatboro,+PA&ie=UTF8&ll=40.161903,-75.10241&spn=0.00874,0.019226&z=16&iwloc=A" target="_blank">Get Directions</a></td></tr></table><p><img src="mgocsm.jpg" width="130" class="image"><p></td>
 
 <td height="400" valign="top">
 <div id="home" div style="position:relative; overflow:auto; display: block; height:100%; width:100%; padding:3px">
