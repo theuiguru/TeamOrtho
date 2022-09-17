@@ -1,3 +1,10 @@
+const splash = document.querySelector(".splash");
+document.addEventListener('DOMContentLoaded', (e) => {
+  setTimeout(() => {
+    splash.classList.add('display-none');
+  }, 2000);
+})
+
 //initialize variables
 var weekday = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 var d = new Date();
