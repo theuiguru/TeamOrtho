@@ -2,7 +2,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Team Ortho</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>.mb {margin-bottom:10px;}</style></head><body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>
+.mb {margin-bottom:10px;}
+dialog {border:none; box-shadow:0 0 10px #333; text-align:center; width:100%; max-width:800px; padding:100px;}
+</style></head><body>
 <section class="hero is-fullheight is-dark has-text-centered">
   <div class="hero-body">
     <div class="container">
@@ -14,8 +17,17 @@
         <a href="./mgocsm" class="button is-large is-outlined is-fullwidth is-info mb">MGOCSM</a>
         <a href="./orthodukso" class="button is-large is-outlined is-fullwidth is-danger mb">Orthodukso</a>
         <a href="./shhimo" class="button is-large is-outlined is-fullwidth is-warning mb">Sh'himo</a>
-        <a href="/" class="button is-large is-outlined is-fullwidth is-primary mb">FAQ</a>
+        <a href="/" class="button is-large is-outlined is-fullwidth is-primary mb faq">FAQ</a>
+        <dialog id="faq"></dialog>
       </p>
     </div>
   </div>
-</section></body></html>
+</section><script>
+const dialog = document.getElementById('faq');
+const button = document.querySelector('.faq');
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+  dialog.innerHTML = `<details><summary>What is TeamOrtho?</summary><p>TeamOrtho is a one-stop shop for all things orthodoxy.</p></details><button onclick="dialog.close();">Close</button>`;
+  dialog.showModal();
+});
+</script></body></html>
