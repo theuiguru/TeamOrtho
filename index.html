@@ -27,7 +27,7 @@ const dialog = document.getElementById('faq');
 const button = document.querySelector('.faq');
 button.addEventListener('click', (event) => {
   event.preventDefault();
-  dialog.innerHTML = `<details><summary>What is TeamOrtho?</summary><p>TeamOrtho is a one-stop shop for all things orthodoxy.</p></details><button onclick="dialog.close();">Close</button>`;
+  dialog.innerHTML = `<details><summary>What is TeamOrtho?</summary><p>TeamOrtho is a one-stop shop for all things orthodoxy.</p><iframe width="560" height="315" src="https://www.youtube.com/embed/GGUPeEFBt9w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></details><button onclick="dialog.close();">Close</button>`;
   dialog.showModal();
 });
 </script></body></html>
