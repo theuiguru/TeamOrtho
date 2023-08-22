@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html><html><head><meta charset="utf-8">
+﻿<!DOCTYPE html><html><head><title>Sh'himo</title><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -13,95 +13,355 @@
 <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="manifest" href="site.webmanifest">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<title>Sh'himo</title><style type="text/css">
-html, body {margin:0; padding:0; text-align:center;}
-img.main {margin-top:3px; width:50px; height:50px; -webkit-filter:sepia(1); filter:sepia(1);}
-.hour {display:none;}
-section {border-bottom:2px solid #ECEFF1; display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100vh;}
-footer {padding:20px 0;}
-.splash {position:fixed; top:0; left:0; width:100%; height:100vh; z-index:1000; display:flex; justify-content:center; align-items:center;}
-.display-none {position:fixed; opacity:0; top:0; left:0; width:100%; height:100vh; background:#223563; z-index:-10; color:#fff; text-align:center; display:flex; justify-content:center; align-items:center; transition:all 0.5s;}
-@keyframes fadeIn { to {opacity:1;} }
-.fadein {opacity:0; animation:fadeIn 0.5s ease-in forwards; width:100%; max-width:200px; border-radius:30px;}
+<style type="text/css">
+nav {padding:0 1em;}
+div.hour {display:none;}
+dialog {width:100%; max-width:900px; border:1px solid #f90;}
+img.main {vertical-align:middle; width:50px; height:50px; -webkit-filter:sepia(1); filter:sepia(1);}
+footer {text-align:center; padding:1em;}
 </style></head><body>
-<div class="splash yellow darken-3"><img src="shhimo.png" class="fadein"></div>
-<nav class="yellow darken-3"><div class="nav-wrapper"><a href="#" class="brand-logo center"><img src="logo.png" class="main"></a></div></nav>
+<nav class="amber darken-2">
+	<div class="nav-wrapper">
+	<a href="#" class="brand-logo center"><img class="main" src="https://theuiguru.github.io/TeamOrtho/shhimo/logo.png" alt=""></a>
+	<div class="left">Liturgical Hour: <span class="hour"></span></div>
+	<a href="#" class="preface right">Preface</a>
+	</div>
+</nav>
+<dialog id="preface">
+	<h5 class='center'>Christ is in our midst! He is and ever shall be!</h5>
+	<h5 class='center'>What does the word “Sh’himo” mean?</h5>
+	<p>“Sh’himo” is the Syriac word for “common” or “ordinary.” It
+	simply refers to the prayers that are done on ordinary days (outside of
+	the three day fast of Nineveh and the Great Fast) when there is not an
+	important feast of the Church being celebrated. The Sh’himo prayers do
+	not include Sunday, as every Sunday is a festal day on which we celebrate the Resurrection (<i>Qyomtho</i>) of our Lord.</p>
+
+	<h5 class='center'>What are the seven times of prayer?</h5>
+	<p>The Church has developed seven liturgical hours of prayer. 
+	It was King David, the Psalmist, who wrote, “Seven times a day I praise You, because of Your righteous judgments” (<i>Psalm 119:164</i>). The hours of prayer are as follows:</p>
+
+	<table border="1" cellpadding="2" cellspacing="2">
+	<tbody>
+		<tr>
+		<th>Liturgical Hour</th>
+		<th>Syriac Word</th>
+		<th>Time</th>
+		</tr>
+		<tr>
+		<td>Vespers (Evening)</td>
+		<td><i>Ramsho</i></td>
+		<td>6:00 PM</td>
+		</tr>
+		<tr>
+		<td>Compline (Night)</td>
+		<td><i>Soutoro</i></td>
+		<td>9:00 PM</td>
+		</tr>
+		<tr>
+		<td>Nocturnes (Midnight)</td>
+		<td><i>Lilio</i></td>
+		<td>12:00 AM</td>
+		</tr>
+		<tr>
+		<td>Matins (Morning)</td>
+		<td><i>Sapro</i></td>
+		<td>6:00 AM</td>
+		</tr>
+		<tr>
+		<td>Third Hour</td>
+		<td><i>Thloth sho’in</i></td>
+		<td>9:00 AM</td>
+		</tr>
+		<tr>
+		<td>Sixth Hour</td>
+		<td><i>Phalgeh d’yaumo</i></td>
+		<td>12:00 PM</td>
+		</tr>
+		<tr>
+		<td>Ninth Hour</td>
+		<td><i>Thsha’a sho’in</i></td>
+		<td>3:00 PM</td>
+		</tr>
+	</tbody>
+	</table>
+	<h5 class='center'>When does the liturgical day begin?</h5>
+	<p>In the Creation account we read: “that God called the light Day, and
+	the darkness He called Night. So the evening and the morning were the
+	first day” (Gen. 1:5). In the Syriac tradition, the day
+	begins with the evening (generally after 6PM). For example,
+	Monday Vespers would be observed on Sunday evening, Tuesday Vespers on
+	Monday evening, etc.</p>
+	<h5 class='center'>What are the themes that correlate to each hour of prayer?</h5>
+	<table border="1" cellpadding="2" cellspacing="2">
+	<tbody>
+		<tr>
+		<th>Liturgical Hour</th>
+		<th>Theme</th>
+		</tr>
+		<tr>
+		<td>Vespers (Evening)</td>
+		<td>Ceaseless praise and uninterrupted thanksgiving</td>
+		</tr>
+		<tr>
+		<td>Compline (Night)</td>
+		<td>Repentance</td>
+		</tr>
+		<tr>
+		<td>Nocturnes (Midnight)</td>
+		<td>Vigilance</td>
+		</tr>
+		<tr>
+		<td><i>*The midnight hour is divided into four watches.<br>
+			Each watch has various themes.</i></td>
+		<td><i>First Watch</i> - 'Mother of God' except on Friday when 'the Cross' is commemorated<br>
+		<i>Second Watch</i> - 'Saints' except on Thursday when 'the Holy Apostles' are commemorated<br>
+		<i>Third Watch</i> - 'Repentance' on Monday, Tuesday, and Thursday; 'the departed' are commemorated on Wednesday and Friday<br>
+		<i>Fourth Watch</i> - 'General themes'
+		</td>
+		</tr>
+		<tr>
+		<td>Matins (Morning)</td>
+		<td>Beginning of creation' and 'resurrection of Christ'; the significance of light dawning upon creation</td>
+		</tr>
+		<tr>
+		<td>Third Hour</td>
+		<td>Follows the theme of the day; i.e. Friday – ‘the Holy Cross’</td>
+		</tr>
+		<tr>
+		<td>Sixth Hour</td>
+		<td>'General themes'</td>
+		</tr>
+		<tr>
+		<td>Ninth Hour</td>
+		<td>'Departed'</td>
+		</tr>
+	</tbody>
+	</table>
+	<p>The third, sixth and ninth hours are associated with our Fall and
+	Salvation. They are decisive moments in the history of salvation. This
+	is particular because at the third hour our Lord received judgment from
+	Pilate; at the sixth hour Christ was crucified and the ninth hour our
+	Lord gave His spirit up into the hands of His Father.</p>
+
+	<h5 class='center'>What are the themes that correlate to each day?</h5>
+	<p>The Sh’himo Prayers have general themes that correspond to each day of the week:</p>
+	<table border="1" cellpadding="2" cellspacing="2">
+	<tbody>
+		<tr>
+		<th>Day</th>
+		<th>Theme</th>
+		</tr>
+		<tr>
+		<td>Sunday</td>
+		<td>Resurrection of Christ</td>
+		</tr>
+		<tr>
+		<td>Monday</td>
+		<td>Repentance</td>
+		</tr>
+		<tr>
+		<td>Tuesday</td>
+		<td>Repentance</td>
+		</tr>
+		<tr>
+		<td>Wednesday</td>
+		<td>The Theotokos*<br>(*Greek word which means “God birth-giver”)<br>
+		</td>
+		</tr>
+		<tr>
+		<td>Thursday</td>
+		<td>Holy Apostles and Saints</td>
+		</tr>
+		<tr>
+		<td>Friday</td>
+		<td>Holy Cross, Martyrs, Confessors</td>
+		</tr>
+		<tr>
+		<td>Saturday</td>
+		<td>Departed Clergy and Laity</td>
+		</tr>
+	</tbody>
+	</table>
+	<p>On Friday, we remember the Cross as it was on Friday when our Lord was
+	crucified. We also remember the Martyrs and Confessors who
+	suffered for the love of Christ.</p>
+	<p>Saturday, we remember all the faithful departed. It was on Holy
+	Saturday when our Lord entered into Hades and preached the Gospel to
+	the departed ones.</p>
+	<p>Every Sunday, we celebrate the feast of feasts, the Resurrection of our Lord.</p>
+
+	<h5 class='center'>How should we pray the Sh’himo?</h5>
+	<ol><li><b>Pray while standing</b> - One of
+	the main prayers we say throughout the Sh’himo is the “Qauma.” It
+	is familiar to many of us as it begins with “Holy art Thou O God, Holy
+	art Thou Immortal…” The word “Qauma” means “standing.” We
+	stand in prayer as we are acknowledging the presence of God. We
+	stand as a sign of reverence and respect.</li>
+
+	<li><b>Kneeling during prayer</b> - We
+	kneel to show our submission to our Lord. For example, when we
+	say “Crucified for us, have mercy on us”, we should kneel and make the
+	sign of the Cross. In this book, when we see “†”, we are reminded
+	to kneel and make the sign of the Cross. We do not kneel for the
+	liturgical prayers on Sunday in commemoration of the joyous
+	Resurrection of our Lord.</li>
+
+	<li><b>Facing east during prayer</b> -
+	When we pray we should face east as it is a sign of awaiting and
+	anticipating our Lord’s glorious second coming. Christ says, “For
+	as the lightning comes from the east and flashes to the west, so also
+	will the coming of the Son of Man be” (Matt. 24:27). </li>
+	</ol>
+
+	<p>Standing, kneeling, making the sign of the cross, and facing east are
+	all ways that we worship and pray with our bodies. We believe
+	that the Holy Spirit has sanctified our bodies as the Temple of God (1
+	Cor. 6:19). Christ, in His Resurrection, gave us hope in the
+	resurrection of both the body and the soul. Therefore, our
+	bodies, along with our hearts and minds, are called to participate in prayer.</p>
+
+	<p>Our life as a Christian should be in communion with God, Who is
+	love. In our communion with God, we are also brought into
+	communion with those who loved God during their lifetime: the Saints
+	and the faithful departed as well as our faithful brethren on this earth. Prayer for the Orthodox is personal, yet communal.</p>
+
+	<p>The canonical prayer has a place in God’s plan for our salvation. The
+	liturgical hours gives us a foretaste of the life in the kingdom, where
+	we will glorify God unceasingly. The Church has developed the Sh’himo
+	prayers as a tool to help us organize our life around prayer. While this is only an abridged version of the Sh’himo evening prayers,
+	may this help to strengthen the prayer life in our homes and our communion with God.</p>
+	<h5 class='center'>Glory to Jesus Christ! Glory forever!</h5>
+</dialog>
 <section class="container">
-<div id="ramsho" class="hour flow-text"><h3>Ramsho (Evening)</h3>
-	<b><u><i>Introductory Prayer</i></u></b>
+	<h5 class='center'>Prefatory Prayer</h5>
+	<i>We pray standing upright while facing East as we collect our thoughts on God.</i>
+	<p>† In the name of the Father, and of the Son, and of the Holy Spirit, one true God;</p>
+	<p>Glory be to Him, and may His grace and mercy be upon us forever. Amen.</p>
+	<p>Holy, Holy, Holy, Lord God Almighty, by whose glory, the heaven and earth are filled. Hosanna in the Highest!</p>
+	<p>Blessed is He, who has come, / and is to come, in the name of the Lord; Glory be to Him in the Highest!</p>
+
+	<h5 class='center'>Qaumo</h5>
+	<i>Each Hour of Prayer BEGINS and CONCLUDES with a Qaumo, except when the Praise of the Cherubim is prayed at the conclusion of Compline.</i>
+	<p>We make the sign of the Cross and kneel as we pray “Crucified for us…”</p></i>
+
+	<p>Holy art Thou, O God!<br>
+	Holy art Thou, Almighty!<br>
+	Holy art Thou, Immortal!<br>
+	+ Crucified for us, Have mercy upon us!
+	(<i>Three times</i>)</p>
+
+	<p>Lord, have mercy upon us!<br>
+	Lord, be kind and have mercy!<br>
+	Lord, accept our service and our prayers!
+	Have mercy upon us!</p>
+
+	<p>Glory be to Thee, O God!<br>
+	Glory be to Thee, O Creator!<br>
+	Glory be to Thee, O Christ the King<br>
+	Who has compassion on His sinful servants. Barekmor.</p>
+
+	<p>Our Father, who art in heaven, Hallowed be Thy name. Thy kingdom come, Thy will be done on earth as it is in heaven. Give us this day, our daily bread and forgive us our debts and sins as we also have forgiven our debtors. Lead us not into temptation, but deliver us from the evil one. + For Thine is the kingdom, the power and the glory, forever and ever. Amen.</p>
+
+	(<i>This prayer is not originally part of the Qaumo, but may be recited.</i>)
+
+	<p>Peace be with You, Mary/(Hail Mary), full of grace, / our Lord is with you. Blessed are you among women,/ and blessed is the fruit of your womb, our Lord Jesus, Christ./ O, Virgin Saint Mary, Mother of God,/ pray for us sinners, / now and at all times, and at the hour of our death. Amen.</p>
+
+	<h5 class='center'>Nicene Creed</h5>
+	<p>We believe in one true God, the Father Almighty / Maker of heaven and earth / and of all things visible and invisible.</p>
+	<p>And in One Lord Jesus Christ / the Only-Begotten Son of God / begotten of the Father
+	before all worlds / Light of Light / True God of True God / begotten,/ not made /
+	being of one essence with the Father / and by Whom all things were made;</p>
+	<p>+ Who for us men and for our salvation / came down from heaven</p>
+	<p>+ And was incarnate of the Holy Spirit and of the Holy Virgin Mary / Mother of
+	God/and became man,</p>
+	<p>+ And was crucified for us / in the days of Pontius Pilate / and suffered, and died, and
+	was buried,</p>
+	<p>+ And on the third day He rose again/ according to His Will / and ascended into
+	heaven / and sits at the right hand of His Father / and shall come again in His great
+	glory / to judge both the living and the dead / whose kingdom shall have no end.</p>
+	<p>And in the one Living Holy Spirit / the life-giving Lord of all / Who proceeds from the
+	Father / and Who together with the Father and the Son is worshipped and glorified/
+	who spoke through the prophets and the apostles.</p>
+	<p>And in the One, Holy, Catholic and Apostolic Church. And we confess one baptism for
+	the remission of sins / and we look for the resurrection of the dead /and the new life in the world to come.</p>
+	<p>Amen. Barekmor. Stoumen kalos, Kurielaison.</p>
+	<div id="ramsho" class="hour">
+	<h5 class='center'>Introductory Prayer</h5>
 	<p>Grant us, Lord God, that while our bodies rest from the labors of the
-	day and our souls are released from worldly thoughts, we may stand in
-	your presence with tranquility at this time of evening and that we may
-	offer you ceaseless praise and uninterrupted thanksgiving; that we may
-	acknowledge your loving kindness by which you direct and rule our
-	lives, and protect and save our souls; to you we offer praise and
-	thanksgiving, now and always and forever. Amen.</p>
-	<b><u><i>Concluding Prayer</i></u></b>
+		day and our souls are released from worldly thoughts, we may stand in
+		your presence with tranquility at this time of evening and that we may
+		offer you ceaseless praise and uninterrupted thanksgiving; that we may
+		acknowledge your loving kindness by which you direct and rule our
+		lives, and protect and save our souls; to you we offer praise and
+		thanksgiving, now and always and forever. Amen.</p>
+	<h5 class='center'>Concluding Prayer</h5>
 	<p>O Jesus Christ, our Lord, close not the door of Your mercy upon our faces. We confess, we are sinners, have mercy upon us. O Lord, Your love for us didst Make You to come down to us from Your place that by Your death, our death might Be abolished. Have mercy upon us. Amen.</p>
-</div>
+	</div>
 
-<div id="compline" class="hour flow-text"><h3>Soutoro (Compline)</h3>
-	<b><u><i>Introductory Prayer</i></u></b>
+	<div id="compline" class="hour">
+	<h5 class='center'>Introductory Prayer</h5>
 	<p>Protect us, Lord, beneath the wings of your loving kindness and turn
-	our hard hearts to the knowledge of your truth; grant us to know and to
-	consider that the evening which has called us to rest and refreshment
-	from labor is a figure of the end of this present life; that we may be
-	diligent in good actions which are pleasing to your will, and we will
-	offer your praise and thanksgiving, Father, Son, and Holy Spirit; now
-	and always and forever and ever. Amen.</p>
-	<b><u><i>Concluding Prayer</i></u></b>
+		our hard hearts to the knowledge of your truth; grant us to know and to
+		consider that the evening which has called us to rest and refreshment
+		from labor is a figure of the end of this present life; that we may be
+		diligent in good actions which are pleasing to your will, and we will
+		offer your praise and thanksgiving, Father, Son, and Holy Spirit; now
+		and always and forever and ever. Amen.</p>
+	<h5 class='center'>Concluding Prayer</h5>
 	<p>O Holy Father, guard us by Thy Sacred Name. O Son of God, our Savior, protect us with Thy victorious Cross. O Holy Spirit, make us worthy temples of Thy holy habitation. O Lord, our God for ever, shelter us under Thy divine wings, at all times, forever. Amen.</p>
-</div>
+	</div>
 
-<div id="lilio" class="hour flow-text"><h3>Lilio (Midnight)</h3>
-	<b><u><i>Introductory Prayer</i></u></b>
+	<div id="lilio" class="hour">
+	<h5 class='center'>Introductory Prayer</h5>
 	<p><i>Awaken us</i>, O Lord, from our sleep in the sloth of sin that we may praise Your watchfulness, You Who watch and do not sleep; give life to our death in the sleep of death and corruption, that we may adore Your compassion, You who live and do not die; grant us in the glorious company of the angels who praise you in heaven, to praise You and bless You in holiness, because You are praised and blessed in heaven and on earth, Father, Son and Holy Spirit, now and always forever. Amen.</p>
-</div>
+	</div>
 
-<div id="sapro" class="hour flow-text"><h3>Sapro (Morning)</h3>
-	<b><u><i>Introductory Prayer</i></u></b>
+	<div id="sapro" class="hour">
+	<h5 class='center'>Introductory Prayer</h5>
 	<p>Creator of the morning, who drive out the darkness and bring light and
-	joy to the creation; create in us habits of virtue and drive from us
-	all the darkness of sin; give us light and joy by the glorious rays of
-	your grace, Lord our God, forever. Amen.</p>
-	<b><u><i>Concluding Prayer</i></u></b>
+		joy to the creation; create in us habits of virtue and drive from us
+		all the darkness of sin; give us light and joy by the glorious rays of
+		your grace, Lord our God, forever. Amen.</p>
+	<h5 class='center'>Concluding Prayer</h5>
 	<p>It is good to give thanks to the Lord and to sing praise to Your name, Most High; to proclaim Your grace in the morning and Your faithfulness in the night. Lord, in the morning You shall hear my voice and in the morning I have prepared myself to appear before You. Lord, have compassion on Your people; Lord, pardon and forgive the sins of all of us. Holy One, let Your right Hand rest upon us and pardon our infirmity, because Your name is forever. Amen.</p>
-</div>
+	</div>
 
-<div id="third" class="hour flow-text"><h3>Third Hour</h3>
-	<b><u><i>Introductory Prayer</i></u></b>
+	<div id="third" class="hour">
+	<h5 class='center'>Introductory Prayer</h5>
 	<p>Cleanse us, Lord, by repentance and by tears of compunction from every
-	passion and stain and defilement of sin, and grant us the grace of
-	victory in our lives at all times and for all the days of our life,
-	Father, Son &amp; Holy Spirit, now and always and forever, Amen.</p>
-	<b><u><i>Concluding Prayer</i></u></b>
+		passion and stain and defilement of sin, and grant us the grace of
+		victory in our lives at all times and for all the days of our life,
+		Father, Son &amp; Holy Spirit, now and always and forever, Amen.</p>
+	<h5 class='center'>Concluding Prayer</h5>
 	<p>I sin and hide myself that man may not see me. But when I do wicked things, the Lord sees me. If a man sees me, I am ashamed of it, but I am not afraid of God. You are the great Judge of judges, Lord; whether a man hastens or whether he delays, he is delivered into Your hands, Halleluiah, in Your mercy have pity on us. Amen.</p>
-</div>
+	</div>
 
-<div id="sixth" class="hour flow-text"><h3>Sixth Hour</h3>
-	<b><u><i>Introductory Prayer</i></u></b>
+	<div id="sixth" class="hour">
+	<h5 class='center'>Introductory Prayer</h5>
 	<p>Enlighten, Lord, the eyes of our minds by the light of your glory, that
-	while we walk in it we may turn aside from the paths and snares of the
-	enemy.&nbsp; Strengthen our hearts in the doing of good.&nbsp; Direct,
-	Lord God, our walking according to your word and our thoughts to
-	meditation on you; keep our lips and tongues by your help for the voice
-	of your praise; establish the truth of you teaching in us and deliver
-	us from every kind of sin, for in you is our hope and on you we call,
-	our Lord and our God forever, Amen.</p>
-	<b><u><i>Concluding Prayer</i></u></b>
+		while we walk in it we may turn aside from the paths and snares of the
+		enemy.&nbsp; Strengthen our hearts in the doing of good.&nbsp; Direct,
+		Lord God, our walking according to your word and our thoughts to
+		meditation on you; keep our lips and tongues by your help for the voice
+		of your praise; establish the truth of you teaching in us and deliver
+		us from every kind of sin, for in you is our hope and on you we call,
+		our Lord and our God forever, Amen.</p>
+	<h5 class='center'>Concluding Prayer</h5>
 	<p>By the prayers of Thy mother and all of Thy saints; I will adore You O King, my Lord, only begotten Son Who by Thy loving kindness, willed to come down for the life and salvation of the entire human race. And was incarnate of the glorious and pure St. Mary, Mother of God, and did become man without change, and was Crucified for us O Christ, our God, Who by Your death, did trample our death to an end. O You Who is the One of the Holy Trinity, equally worshipped and glorified, with the Father, and with Your Living Holy Spirit, have mercy upon us all. Amen.</p>
-</div>
+	</div>
 
-<div id="ninth" class="hour flow-text"><h3>Ninth Hour</h3>
-	<b><u><i>Introductory Prayer</i></u></b>
+	<div id="ninth" class="hour">
+	<h5 class='center'>Introductory Prayer</h5>
 	<p>Receive, Lord, the souls of your servants in tabernacles of light and
-	make them to dwell in the harbor of blessedness; give them rest in the
-	glorious bosom of Abraham, Isaac, and Jacob, the Patriarchs, that on
-	the great day of your glorious manifestation we may stand with them at
-	your right hand, and offer fitting praise to you and your Father and
-	your Holy Spirit, now and always and forever, Amen.</p>
-	<b><u><i>Concluding Prayer</i></u></b>
+		make them to dwell in the harbor of blessedness; give them rest in the
+		glorious bosom of Abraham, Isaac, and Jacob, the Patriarchs, that on
+		the great day of your glorious manifestation we may stand with them at
+		your right hand, and offer fitting praise to you and your Father and
+		your Holy Spirit, now and always and forever, Amen.</p>
+	<h5 class='center'>Concluding Prayer</h5>
 	<p>O Thou, full of mercy, renew Thy creation at the resurrection, O Lord, comfort and absolve our departed ones, who died with hope in Thee, and await Thy coming. O Lord, make them dwell in the bosom of Abraham, and of Issac and of Jacob. May the living and the departed together cry out: ‘Blessed is He, who has come, and is to come, and give life to the dead.’ Amen.</p>
-</div>
-</section><footer class="page-footer yellow darken-3">"<i>Seven times a day I praise You, because of Your righteous judgments.</i>" - Psalms 119:164</footer><script src="script.js"></script></body></html>
+	</div>
+</section>
+<footer class="page-footer amber darken-2">"<i>Seven times a day I praise You, because of Your righteous judgments.</i>" - Psalms 119:164</footer><script src="app.js"></script></body></html>
