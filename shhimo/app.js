@@ -1,3 +1,4 @@
+// To open and close dialog modal.
 const dialog = document.getElementById('preface');
 const button = document.querySelector('.preface');
 button.addEventListener('click', (event) => {
@@ -9,6 +10,16 @@ dialog.addEventListener('click', (event) => {
     dialog.close();
   }
 });
+
+// Display the splash screen image.
+const splash = document.querySelector(".splash");
+document.addEventListener('DOMContentLoaded', (e) => {
+  setTimeout(() => {
+    splash.classList.add('display-none');
+  }, 1000);
+})
+
+// Liturgical hour times
 var weekday = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 var d = new Date();
 var hour = d.getHours();
