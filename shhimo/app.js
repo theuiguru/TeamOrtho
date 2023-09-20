@@ -44,7 +44,7 @@ if ((hour >= 17) && (hour <21)){
 		day = 0;
 	}
 	document.getElementById("ramsho").style.display = 'block';
-	document.querySelector("h3.hour").textContent = 'Ramsho';
+	document.querySelector("span.hour").textContent = 'Ramsho';
 }
 else if ((hour >= 21) && (hour <=23)){
 	day = day + 1;
