@@ -15,9 +15,10 @@
 <link rel="manifest" href="site.webmanifest">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"><style type="text/css">
-nav {padding:0 1em;}
+nav {padding:0 1em; position:fixed; top:0;}
 div.hour {display:none;}
 dialog {width:100%; max-width:900px; border:1px solid #f90;}
+section.container {margin:5em auto;}
 img.main {vertical-align:middle; width:50px; height:50px; -webkit-filter:sepia(1); filter:sepia(1);}
 footer {text-align:center; padding:1em;}
 .splash {position:fixed; top:0; left:0; width:100%; height:100vh; z-index:1000; display:flex; justify-content:center; align-items:center;}
@@ -34,6 +35,7 @@ footer {text-align:center; padding:1em;}
 	</div>
 </nav>
 <dialog id="preface">
+	<a class="right" onclick="dialog.close();"><i class="material-icons">clear</i></a>
 	<h5 class='center'>Christ is in our midst! He is and ever shall be!</h5>
 	<h5 class='center'>What does the word “Sh’himo” mean?</h5>
 	<p>“Sh’himo” is the Syriac word for “common” or “ordinary.” It
