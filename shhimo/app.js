@@ -16,7 +16,7 @@ const splash = document.querySelector(".splash");
 document.addEventListener('DOMContentLoaded', (e) => {
   setTimeout(() => {
     splash.classList.add('display-none');
-  }, 1000);
+  }, 500);
 })
 
 // Liturgical hour times
