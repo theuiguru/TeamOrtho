@@ -1,24 +1,21 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Team Ortho</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>
-.mb {margin-bottom:10px;}
 dialog {border:none; box-shadow:0 0 10px #333; text-align:center; width:100%; max-width:800px; padding:100px;}
 </style></head><body>
-<section class="hero is-fullheight is-dark has-text-centered">
-  <div class="hero-body">
-    <div class="container">
-      <span class="icon has-text-warning"><i class="fas fa-3x fa-church"></i></span>
-      <h1 class="title is-1">Team Ortho</h1>
-      <p class="subtitle">You Only Live Ortho!</p>
-      <p>
-        <a href="./maps" class="button is-large is-outlined is-fullwidth is-success mb">Maps</a>
-        <a href="./mgocsm" class="button is-large is-outlined is-fullwidth is-info mb">MGOCSM</a>
-        <a href="./orthodukso" class="button is-large is-outlined is-fullwidth is-danger mb">Orthodukso</a>
-        <a href="./shhimo" class="button is-large is-outlined is-fullwidth is-warning mb">Sh'himo</a>
-        <a href="/" class="button is-large is-outlined is-fullwidth is-primary mb faq">FAQ</a>
-        <dialog id="faq"></dialog>
-      </p>
-    </div>
+<section class="text-white text-center bg-zinc-700 h-screen flex justify-center items-center">
+  <div class="container">
+    <span class="text-yellow-200"><i class="fas fa-3x fa-church"></i></span>
+    <h1 class="text-3xl font-bold">Team Ortho</h1>
+    <p class="text-lg mb-10">You Only Live Ortho!</p>
+    <p>
+      <a href="./maps" class="text-green-400 hover:text-white border-2 border-green-400 hover:bg-green-400 p-3 rounded">Maps</a>
+      <a href="./mgocsm" class="text-sky-400 hover:text-white border-2 border-sky-400 hover:bg-sky-400 p-3 rounded">MGOCSM</a>
+      <a href="./orthodukso" class="text-red-400 hover:text-white border-2 border-red-400 hover:bg-red-400 p-3 rounded">Orthodukso</a>
+      <a href="./shhimo" class="text-yellow-400 border-2 border-yellow-400 hover:bg-yellow-300 hover:text-black p-3 rounded">Sh'himo</a>
+      <a href="/" class="text-teal-400 hover:text-white border-2 border-teal-400 hover:bg-teal-400 p-3 rounded faq">FAQ</a>
+      <dialog id="faq"></dialog>
+    </p>
   </div>
 </section><script>
 const dialog = document.getElementById('faq');
