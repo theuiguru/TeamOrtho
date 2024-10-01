@@ -7,9 +7,17 @@ html, body {margin:0; padding:0;} #map {width:100vw; height:100vh;}</style></hea
 document.addEventListener('DOMContentLoaded', init, false);
 let map;
 let locations = [
-  {"lat":30.216, "lng":-92.033, "name":"location 1"},
-  {"lat":31.216, "lng":-91.033, "name":"location 2"},
-  {"lat":29.216, "lng":-93.033, "name":"location 3"}
+  {"lat":40.8475431, "lng":-73.6152621, "name":"Saint Andrew's Malankara Orthodox Church", "address":"", "website":"", "picture":"https://www.neamericandiocese.org/uploads/parish/STALI-1656078635.png", "vicar":""},
+  {"lat":40.7092561, "lng":-73.6748358, "name":"St. Stephens Orthodox Church of India", "address":"", "website":"", "picture":"https://www.neamericandiocese.org/uploads/parish/St-Stephens-Orthodox-Church-of-Long-Island-1640764998.jpg", "vicar":""},
+  {"lat":40.7072333, "lng":-73.6811332, "name":"St. Basil's Malankara Orthodox Church", "address":"", "website":"", "picture":"https://www.neamericandiocese.org/uploads/parish/St-Basil-Orthodox-Church-of-Franklin-Square-1640764816.jpg", "vicar":""},
+  {"lat":40.748971, "lng":-73.9047729, "name":"St. Mary's Malankara Orthodox Church", "address":"", "website":"", "picture":"https://www.neamericandiocese.org/uploads/parish/St-Mary-s-Orthodox-Church-of-Jackson-Heights-1640764852.jpg", "vicar":""},
+  {"lat":40.7309886, "lng":-73.0980429, "name":"St. Mary's Malankara Orthodox Church", "address":"", "website":"", "picture":"https://www.neamericandiocese.org/uploads/parish/St-Mary-s-Orthodox-Church-of-West-Sayville-1640765021.jpg", "vicar":""},
+  {"lat":40.7357091, "lng":-73.7000339, "name":"St. Gregorios Malankara Orthodox Church", "address":"", "website":"", "picture":"https://www.neamericandiocese.org/uploads/parish/St-Gregorios-Orthodox-Church-of-Floral-Park-1640764901.jpg", "vicar":""},
+  {"lat":40.6856464, "lng":-73.7263655, "name":"St. Gregorios Orthodox Church of India", "address":"", "website":"", "picture":"https://www.neamericandiocese.org/uploads/parish/St-Gregorios-Orthodox-Church-of-Queens-1640764766.jpg", "vicar":""},
+  {"lat":40.7067464, "lng":-73.7114293, "name":"St. Basilios Malankara Orthodox Church", "address":"", "website":"", "picture":"https://www.neamericandiocese.org/uploads/parish/St-Baselios-Orthodox-Church-of-Elmont-1640764787.jpg", "vicar":""},
+  {"lat":40.7067693, "lng":-73.9141544, "name":"St. Basilios Orthodox Church", "address":"", "website":"", "picture":"https://www.neamericandiocese.org/uploads/parish/St-Baselios-Orthodox-Church-of-Brooklyn-1640764924.jpg", "vicar":""},
+  {"lat":40.7333244, "lng":-73.7188368, "name":"St. John's Malankara Orthodox Church", "address":"", "website":"", "picture":"https://www.neamericandiocese.org/uploads/parish/no-image-parish-1640767230.png", "vicar":""},
+  {"lat":40.7303337, "lng":-73.5320859, "name":"St. Thomas Malankara Orthodox Church", "address":"", "website":"", "picture":"https://www.neamericandiocese.org/uploads/parish/St-Thomas-Orthodox-Church-of-Long-Island-1640764732.jpg", "vicar":"Rev. Fr. Abey George"}
 ];
 async function init() {
   if('geolocation' in navigator) {
@@ -20,7 +28,7 @@ async function init() {
 
       console.log(locations);
 
-      map = L.map('map').setView([lat, lon], 9);
+      map = L.map('map').setView([lat, lon], 10);
 
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -28,8 +36,12 @@ async function init() {
       }).addTo(map);
 
       locations.forEach(p => {
-        let marker = L.marker([p.lat, p.lng]).addTo(map);
-        marker.bindPopup(`<h2>Location</h2><p>Name: ${p.name}</p>`);
+        let myIcon = L.icon({
+          iconUrl: 'https://static.thenounproject.com/png/1661268-200.png',
+          iconSize: [38, 38]
+        });
+        let marker = L.marker([p.lat, p.lng], {icon: myIcon}).addTo(map);
+        marker.bindPopup(`<h2>${p.name}</h2><p>Name: ${p.name}<br/>Address: ${p.address}<br/>Website: ${p.website}<br/>Vicar: ${p.vicar}<br/><img src="${p.picture}" width="200"></p>`);
         marker.on('click', function() { this.openPopup(); });
       });
 
