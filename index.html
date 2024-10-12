@@ -26,8 +26,8 @@ dialog {border:none; box-shadow:0 0 10px #333; text-align:center; width:100%; ma
 </section><script>
 const dialog = document.getElementById('faq');
 const button = document.querySelector('.faq');
-button.addEventListener('click', (event) => {
-  event.preventDefault();
+button.addEventListener('click', (e) => {
+  e.preventDefault();
   dialog.showModal();
 });
 </script></body></html>
