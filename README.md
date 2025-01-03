@@ -1,9 +1,8 @@
 # TeamOrtho
-You Only Live Ortho
-
-[Demo](http://theuiguru.github.io/TeamOrtho)
+_You Only Live Ortho_
 
 <img src="https://mosc.in/app/images/logodesktop.png">
 
 ## Resources
-[Malankara Orthodox Syrian Church](https://mosc.in)
+- [Demo Site](http://theuiguru.github.io/TeamOrtho)
+- [Malankara Orthodox Syrian Church](https://mosc.in)
