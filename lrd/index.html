@@ -2,11 +2,14 @@
 html, body {margin:0; padding:0;}
 header {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; background:#3b5997; color:#fff;}
 section {text-align:center; padding:2em}
-section ul li {text-align:left;}
+header ul li {display:inline-block;}
+header ul li::after {content: " | ";}
+header ul li:last-child::after {content: "";}
+header ul li a {color:#fff;}
+header ul li a:hover {text-decoration:none;}
 </style></head><body>
 <header><img src="lrd_logo.png" alt=""><h1>Liturgical Resource Development (LRD)</h1>
 <p>The Liturgical Resource Development (LRD) application provides links to the resources and books specific to the Indian Orthodox Church.</p>
-</header><section><img src="lrd_app.jpg" alt="">
 <ul>
     <li><a href='http://ds-wa.org/lrd' target="blank">LRD Application Development Resource</a></li>
     <li><a href='https://play.google.com/store/apps/details?id=com.rightmovesolutions.lrd' target='blank'>Install from Google Play</a></li>
@@ -14,4 +17,5 @@ section ul li {text-align:left;}
     <li><a href='https://www.facebook.com/LiturgicalRD' target='blank'>Facebook Page</a></li>
     <li><a href='https://www.youtube.com/channel/UCMC8v2TwFJhjtHCXyiNg6TA' target='blank'>YouTube Page</a></li>
 </ul>
+</header><section><img src="lrd_app.jpg" alt="">
 </section></body></html>
