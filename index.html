@@ -1,38 +1,97 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Team Ortho</title>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Team Ortho</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>
-dialog {border:none; box-shadow:0 0 10px #333; text-align:center; width:100%; max-width:800px; padding:100px;}
-button {background:#292929; box-shadow:2px 2px 5px #000050 inset 2px 2px 5px #000050; border-radius:5px; border:none; padding:5px; text-shadow:0 0 5px #fbbf24, 0 0 10px #fbbf24, 0 0 15px #fbbf24, 0 0 20px #fbbf24;}
-button:hover {text-shadow:0 0 5px #f43f5e, 0 0 10px #f43f5e, 0 0 15px #f43f5e, 0 0 20px #f43f5e;}
-button:active {text-shadow:0 0 5px #6666ff, 0 0 10px #6666ff, 0 0 15px #6666ff, 0 0 20px #6666ff;}
-</style></head><body>
-<section class="text-white text-center bg-zinc-700 h-screen flex justify-center items-center">
-  <div class="container">
-    <button><i class="fas fa-3x fa-church mb-2"></i></button>
-    <h1 class="text-3xl font-bold">Team Ortho</h1>
-    <p class="text-lg mb-10">You Only Live Ortho!</p>
-    <p class="flex flex-col justify-center items-center">
-      <a href="./history" class="text-orange-400 hover:text-white border border-orange-400 hover:bg-orange-400 p-3 rounded block w-1/2 mb-3">History</a>
-      <a href="./maps" class="text-green-400 hover:text-white border border-green-400 hover:bg-green-400 p-3 rounded block w-1/2 mb-3">Maps</a>
-      <a href="./mgocsm" class="text-sky-400 hover:text-white border border-sky-400 hover:bg-sky-400 p-3 rounded block w-1/2 mb-3">MGOCSM</a>
-      <a href="./orthodukso" class="text-red-400 hover:text-white border border-red-400 hover:bg-red-400 p-3 rounded block w-1/2 mb-3">Orthodukso</a>
-      <a href="./shhimo" class="text-yellow-400 border border-yellow-400 hover:bg-yellow-400 hover:text-black p-3 rounded block w-1/2 mb-3">Sh'himo</a>
-      <a href="./lrd" class="text-blue-400 border border-blue-400 hover:bg-blue-400 hover:text-black p-3 rounded block w-1/2 mb-3">LRD App</a>
-      <a href="/" class="text-purple-400 hover:text-white border border-purple-400 hover:bg-purple-400 p-3 rounded block w-1/2 faq">FAQ</a>
-    </p>
-    <dialog id="faq" class="border-none shadow-md w-full lg:w-1/2 mx-auto p-16"><details><summary>What is TeamOrtho?</summary><p>TeamOrtho is a one-stop shop for all things orthodoxy.</p><iframe width="100%" height="315" src="https://www.youtube.com/embed/GGUPeEFBt9w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></details>
-      <button onclick="dialog.close();" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="text-2xl font-bold h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M6.293 6.293a1 1 0 0 1 1.414 0L10 8.586l2.293-2.293a1 1 0 1 1 1.414 1.414L11.414 10l2.293 2.293a1 1 0 0 1-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L8.586 10 6.293 7.707a1 1 0 0 1 0-1.414z"/>
-        </svg>
-      </button>
-    </dialog>
-  </div>
-</section><script>
-const dialog = document.getElementById('faq');
-const button = document.querySelector('.faq');
-button.addEventListener('click', (e) => {
-  e.preventDefault();
-  dialog.showModal();
-});
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body {background: linear-gradient(135deg, #111827, #1e293b); font-family: 'Inter', sans-serif; color: white;}
+.glass {background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.15); transition: all 0.25s ease;}
+.glass:hover {transform: translateY(-6px); background: rgba(255, 255, 255, 0.12); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);}
+.hero-icon {text-shadow: 0 0 15px rgba(250, 204, 21, 0.7);}
+</style></head>
+<body class="min-h-screen flex flex-col items-center justify-center text-center p-6">
+
+  <!-- Hero -->
+  <header class="mb-16">
+    <div class="mb-6">
+      <i class="fas fa-church text-yellow-400 text-6xl hero-icon"></i>
+    </div>
+    <h1 class="text-5xl font-extrabold mb-2">Team Ortho</h1>
+    <p class="text-gray-300 text-lg italic">You Only Live Ortho!</p>
+  </header>
+
+  <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl w-full">
+    <a href="./history" class="glass rounded-2xl p-8 flex flex-col items-center hover:border-orange-400">
+      <i class="fa-solid fa-book text-orange-400 text-4xl mb-3"></i>
+      <h3 class="font-semibold text-xl mb-1">History</h3>
+      <p class="text-gray-400 text-sm">Discover the roots and milestones of Orthodoxy.</p>
+    </a>
+
+    <a href="./maps" class="glass rounded-2xl p-8 flex flex-col items-center hover:border-green-400">
+      <i class="fa-solid fa-map-location-dot text-green-400 text-4xl mb-3"></i>
+      <h3 class="font-semibold text-xl mb-1">Maps</h3>
+      <p class="text-gray-400 text-sm">Find church locations and event routes.</p>
+    </a>
+
+    <a href="./mgocsm" class="glass rounded-2xl p-8 flex flex-col items-center hover:border-sky-400">
+      <i class="fa-solid fa-people-group text-sky-400 text-4xl mb-3"></i>
+      <h3 class="font-semibold text-xl mb-1">MGOCSM</h3>
+      <p class="text-gray-400 text-sm">Youth fellowship and faith-building community.</p>
+    </a>
+
+    <a href="./orthodukso" class="glass rounded-2xl p-8 flex flex-col items-center hover:border-red-400">
+      <i class="fa-solid fa-cross text-red-400 text-4xl mb-3"></i>
+      <h3 class="font-semibold text-xl mb-1">Orthodukso</h3>
+      <p class="text-gray-400 text-sm">Articles and reflections on Orthodox living.</p>
+    </a>
+
+    <a href="./shhimo" class="glass rounded-2xl p-8 flex flex-col items-center hover:border-yellow-400">
+      <i class="fa-solid fa-book-bible text-yellow-400 text-4xl mb-3"></i>
+      <h3 class="font-semibold text-xl mb-1">Sh’himo</h3>
+      <p class="text-gray-400 text-sm">Daily prayer book and chants.</p>
+    </a>
+
+    <a href="./lrd" class="glass rounded-2xl p-8 flex flex-col items-center hover:border-blue-400">
+      <i class="fa-solid fa-mobile-screen-button text-blue-400 text-4xl mb-3"></i>
+      <h3 class="font-semibold text-xl mb-1">LRD App</h3>
+      <p class="text-gray-400 text-sm">Access the LRD mobile experience.</p>
+    </a>
+
+    <a href="#" class="glass rounded-2xl p-8 flex flex-col items-center hover:border-purple-400 faq">
+      <i class="fa-solid fa-circle-question text-purple-400 text-4xl mb-3"></i>
+      <h3 class="font-semibold text-xl mb-1">FAQ</h3>
+      <p class="text-gray-400 text-sm">Get answers about Team Ortho and its mission.</p>
+    </a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-16 text-sm text-gray-500">
+    © <span id="year"></span> Team Ortho — All rights reserved.
+  </footer>
+
+  <!-- FAQ Modal -->
+  <dialog id="faq" class="max-w-xl mx-auto bg-zinc-900/95 text-white rounded-lg p-8 shadow-lg">
+    <h2 class="text-2xl font-bold text-purple-400 mb-4">FAQ</h2>
+    <details open class="mb-4">
+      <summary class="font-semibold cursor-pointer">What is Team Ortho?</summary>
+      <p class="mt-2 text-gray-300">Team Ortho is a unified hub for Orthodox faith, youth, and resources — a digital gateway to prayer, study, and community.</p>
+      <iframe width="100%" height="315" class="mt-4 rounded"
+        src="https://www.youtube.com/embed/GGUPeEFBt9w"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </details>
+    <button onclick="dialog.close();" class="bg-purple-500 hover:bg-purple-600 text-white rounded px-4 py-2">Close</button>
+  </dialog>
+
+<script>
+  const dialog = document.getElementById('faq');
+  const faqBtn = document.querySelector('.faq');
+  faqBtn.addEventListener('click', e => {
+    e.preventDefault();
+    dialog.showModal();
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script></body></html>
