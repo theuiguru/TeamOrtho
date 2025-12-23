@@ -1,28 +1,243 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Orthodukso</title><link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"><style>
-html, body {margin:0; padding:0; line-height:1.3; font-family:sans-serif; font-size:18px; color:#263238;}
-.container {display:grid; grid-template-columns:1fr 2fr; grid-gap:0; grid-auto-rows:100vh;}
-header {background:#006 url(./orthodukso.jpg) no-repeat center left fixed;}
-section {overflow-y:auto; padding:2em; background:#e8eaf6;}
-h2 {border-bottom:2px solid #cfd8dc; padding-bottom:10px;}
-ol {padding:0;} lh {font-weight:bold;} li {margin:0 20px;}
-footer {padding:20px; background-color:#1a237e; color:#fff; display:flex; align-items:center; justify-content:space-around;} footer a {color:#fff;}
-@media(max-width:850px) {
-  .container {display:block;}
-  header {position:sticky; top:0; height:200px; background-position:top left;}
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orthodukso</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #263238;
 }
-</style></head><body><div class="container"><header></header><section>
-  <h2>What is <i>Orthodukso</i>?</h2>
-  <p><i>Orthodukso</i>&trade; is a collaborative effort of a national network of Orthodox Christian laity. Our mission is to engage American society in a uniquely Orthodox Christian perspective. Through topical and up to date commentary on theology, current events, politics, science, culture or whatever is particularly relevant; we hope to be a point of access for anyone interested in shaping our identity as the Orthodox Church in America.</p>
-  <p>If you are Orthodox, we hope to bring you with fresh ideas about an Ancient Faith. If you are not Orthodox, we hope to be a valuable resource for understanding the Orthodox viewpoint. For all of our readers, we hope to challenge you to take a second look at what you may have thought was familiar.</p>
-  <h2>Our Five Aims:</h2>
-  <ol>
-    <li>To direct inquirers to resources on the theology and spirituality of the Orthodox Church.</li>
-    <li>To engage the world wide web with the teachings and practices of the Orthodox Christian Church and the Faith handed down from the Apostles.</li>
-    <li>To provide interesting and informative news and media relevant to a Christian world view.</li>
-    <li>To facilitate the exchange of ideas on developing an identity for the Orthodox Church in America.</li>
-    <li>To develop the network of Orthodox Christians concerned about the future of the Church.</li>
-  </ol>
-  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Forthodukso&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="500" style="border:none;overflow:hidden;max-width:500px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+/* LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 100vh;
+}
+
+/* LEFT COLUMN */
+main {
+  display: flex;
+  flex-direction: column;
+  background: #006;
+}
+
+/* HEADER (LOGO AREA) */
+header {
+  background: #006 url(./orthodukso.jpg) no-repeat center left;
+  height: 200px;
+}
+
+/* STICKY NAV */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 102, 0.9);
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 14px 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* RIGHT COLUMN */
+section {
+  padding: 2em;
+  background: #e8eaf6;
+}
+
+h2 {
+  border-bottom: 2px solid #cfd8dc;
+  padding-bottom: 10px;
+}
+
+/* ARTICLES */
+article {
+  margin-bottom: 2.5em;
+}
+
+article h3 a {
+  color: #1a237e;
+  text-decoration: none;
+}
+
+article h3 a:hover {
+  text-decoration: underline;
+}
+
+article small {
+  color: #555;
+  display: block;
+  margin-bottom: 0.8em;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  background: #1a237e;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer a { color: #fff; }
+
+/* MOBILE */
+@media (max-width: 850px) {
+  .container {
+    display: block;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+  }
+}
+</style></head><body>
+<div class="container">
+  <main>
+    <header></header>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </nav>
+
+    <iframe
+      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Forthodukso&tabs=timeline"
+      width="100%"
+      height="500"
+      style="border:none;overflow:hidden;max-width:500px;">
+    </iframe>
+  </main>
+  <section>
+    <h2 id="home">What is <i>Orthodukso</i>?</h2>
+    <p>
+      <i>Orthodukso</i>&trade; is a collaborative effort of a national network of
+      Orthodox Christian laity.
+    </p>
+
+    <h2>Our Five Aims</h2>
+    <ol>
+      <li>To direct inquirers to Orthodox theology and spirituality.</li>
+      <li>To engage the web with Orthodox Christian teaching.</li>
+      <li>To provide Christian world-view commentary.</li>
+      <li>To facilitate exchange of Orthodox ideas.</li>
+      <li>To develop a national Orthodox network.</li>
+    </ol>
+
+    <h2 id="blog">Latest Posts</h2>
+
+    <div id="blogger-feed">
+      <p>Loading posts…</p>
+    </div>
+
+    <div id="pagination">
+      <button id="prevBtn" disabled>← Previous</button>
+      <span id="pageInfo"></span>
+      <button id="nextBtn">Next →</button>
+    </div>
+
   </section>
-</div><footer><a href="http://facebook.com/orthodukso"><i class="fab fa-2x fa-facebook-f"></i></a><a href="http://twitter.com/orthodukso"><i class="fab fa-2x fa-twitter"></i></a></footer></body></html>
+</div>
+<footer><a href="http://facebook.com/orthodukso"><i class="fab fa-facebook-f"></i></a><a href="http://twitter.com/orthodukso"><i class="fab fa-twitter"></i></a></footer><script>
+const POSTS_PER_PAGE = 5;
+let allPosts = [];
+let currentPage = 1;
+
+function renderPage() {
+  const container = document.getElementById("blogger-feed");
+  const pageInfo = document.getElementById("pageInfo");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  container.innerHTML = "";
+
+  const start = (currentPage - 1) * POSTS_PER_PAGE;
+  const end = start + POSTS_PER_PAGE;
+  const pagePosts = allPosts.slice(start, end);
+
+  pagePosts.forEach(entry => {
+    const title = entry.title.$t;
+    const content = entry.content.$t;
+    const published = entry.published.$t;
+
+    const postUrl = entry.link.find(
+      l => l.rel === "alternate"
+    ).href;
+
+    const article = document.createElement("article");
+    article.innerHTML = `
+      <h3>
+        <a href="${postUrl}" target="_blank" rel="noopener">
+          ${title}
+        </a>
+      </h3>
+      <small>${new Date(published).toLocaleDateString()}</small>
+      <div>${content}</div>
+      <hr>
+    `;
+
+    container.appendChild(article);
+  });
+
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+  pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+
+  prevBtn.disabled = currentPage === 1;
+  nextBtn.disabled = currentPage === totalPages;
+}
+
+function handleBloggerFeed(data) {
+  if (!data.feed || !data.feed.entry) {
+    document.getElementById("blogger-feed").innerHTML =
+      "<p>No posts found.</p>";
+    return;
+  }
+
+  allPosts = data.feed.entry.sort(
+    (a, b) => new Date(b.published.$t) - new Date(a.published.$t)
+  );
+
+  renderPage();
+}
+
+document.getElementById("prevBtn").onclick = () => {
+  if (currentPage > 1) {
+    currentPage--;
+    renderPage();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+};
+
+document.getElementById("nextBtn").onclick = () => {
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+  if (currentPage < totalPages) {
+    currentPage++;
+    renderPage();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+};
+</script>
+<script src="https://orthodukso.blogspot.com/feeds/posts/default?max-results=150&alt=json-in-script&callback=handleBloggerFeed"></script></body></html>
